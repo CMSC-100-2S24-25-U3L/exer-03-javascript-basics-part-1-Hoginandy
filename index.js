@@ -37,5 +37,13 @@ function passwordChecker(password) {
     return false;
 }
 
-console.log(validatePassword("hithere!!1", "hithere!!1"));
-console.log(passwordChecker("Whatsupthere1"));
+
+function reversePassword(password) {
+    var newpassword = ""; // new password string
+    for (let i = password.length - 1; i > -1; i--) { // reversal of string
+        newpassword = newpassword.concat(password[i]);
+    }
+    return newpassword;
+}
+
+console.log(reversePassword("passwordtesting!!11"));
