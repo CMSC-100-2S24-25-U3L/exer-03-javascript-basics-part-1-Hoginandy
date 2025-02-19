@@ -14,6 +14,7 @@ function validatePassword(pass1, pass2) {
     }
 }
 
+
 function passwordChecker(password) {
     let numbercount = 0;
     let lowercasecount = 0;
@@ -46,4 +47,19 @@ function reversePassword(password) {
     return newpassword;
 }
 
-console.log(reversePassword("passwordtesting!!11"));
+
+function storePassword(name, password, newpassword) {
+    if (validatePassword(password, newpassword) == true) { // validation of password
+        password = reversePassword(password); // reversal of password
+    }
+
+    const info = { // object instantiation
+        name: name,
+        password: password
+    }
+
+    return info;
+}
+
+
+console.log(storePassword("leon", "Whatsup!1", "Whatsup!1"));
